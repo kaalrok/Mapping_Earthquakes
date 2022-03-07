@@ -54,33 +54,33 @@ L.control.layers(baseMaps).addTo(map);
 // Then we add our 'graymap' tile layer to the map.
 // dark.addTo(map);
 
-//  Add a marker to the map for Los Angeles, California.
-// let marker = L.circleMarker([34.0522, -118.2437]).addTo(map);
+// Add a marker to the map for Los Angeles, California.
+let marker = L.circleMarker([34.0522, -118.2437]).addTo(map);
 
 // Add GeoJSON data.
-// let sanFranAirport =
-// {
-//     "type": "FeatureCollection", "features": [{
-//         "type": "Feature",
-//         "properties": {
-//             "id": "3469",
-//             "name": "San Francisco International Airport",
-//             "city": "San Francisco",
-//             "country": "United States",
-//             "faa": "SFO",
-//             "icao": "KSFO",
-//             "alt": "13",
-//             "tz-offset": "-8",
-//             "dst": "A",
-//             "tz": "America/Los_Angeles"
-//         },
-//         "geometry": {
-//             "type": "Point",
-//             "coordinates": [-122.375, 37.61899948120117]
-//         }
-//     }
-//     ]
-// };
+let sanFranAirport =
+{
+    "type": "FeatureCollection", "features": [{
+        "type": "Feature",
+        "properties": {
+            "id": "3469",
+            "name": "San Francisco International Airport",
+            "city": "San Francisco",
+            "country": "United States",
+            "faa": "SFO",
+            "icao": "KSFO",
+            "alt": "13",
+            "tz-offset": "-8",
+            "dst": "A",
+            "tz": "America/Los_Angeles"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.375, 37.61899948120117]
+        }
+    }
+    ]
+};
 
 // // pointToLayer example
 // L.geoJson(data, {
@@ -116,4 +116,4 @@ d3.json(earthquakeData).then(function (data) {
     L.geoJSON(data).addTo(map);
 });
 
-
+// link to 
