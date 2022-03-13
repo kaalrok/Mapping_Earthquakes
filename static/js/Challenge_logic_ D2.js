@@ -162,12 +162,12 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geoj
     // 5. Change the color function to use three colors for the major earthquakes based on the magnitude of the earthquake.
     function getColor(magnitude) {
         if (magnitude > 6) {
-            return "#ea2c2c";
+            return "#a10a0a";
         }
         if (magnitude > 5) {
             return "#ea822c";
         }
-        if (magnitude < 5) {
+        if (magnitude <= 5) {
             return "#ee9c00";
         }
     }
@@ -187,7 +187,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geoj
     L.geoJSON(majorData, {
         // We turn each feature into a circleMarker on the map.
         pointToLayer: function (feature, latlng) {
-            console.log(data);
+            console.log(majorData);
             return L.circleMarker(latlng);
         },
         // We set the style for each circleMarker using our styleInfo function.
